@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery</title>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script>
+            $("document").ready(() => {
+                $("#slide-up").click(()=>{
+                    $("#textBox").slideUp("2000", "linear");
+                })
+                $("#slide-down").click(() => {
+                    $("#textBox").slideDown("2000", "linear");
+                })
+                $("#slide-toggle").click(() => {
+                    $("#textBox").slideToggle("2000", "linear");
+                })
+            });
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <a href="#" id="slide-up">Slide Up</a> |
+        <a href="#" id="slide-down">Slide Down</a> |
+        <a href="#" id="slide-toggle">Slide Toggle</a>
+
+        <div id="textBox">
+            Something cool written here.
+        </div>
+        <div class="textCopy">
+            A copy of something cool written here.
+        </div>
+    </body>
+</html>

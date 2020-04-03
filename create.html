@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery</title>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script>
+            $("document").ready(() => {
+                // $("p:first-child").css("border", "2px blue solid")
+                //$("p:last-of-type").css("border", "2px blue solid")
+                // $("p:contains('JQuery')").css("border", "2px blue solid")
+                $("p:nth-child(3)").css("border", "2px blue solid")
+            });
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+            </p>
+            <!-- <div> -->
+            <p id="second">
+                A copy of something cool written here. JQuery
+                A copy of something cool written here.
+                A copy of something cool written here.
+                A copy of something cool written here.
+                A copy of something cool written here.
+            </p>
+            <!-- </div> -->
+            <p>
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+            </p>
+
+        </div>
+        <div id="div-list">
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery</title>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script>
+            $("document").ready(() => {
+                $("#add-class").click(()=>{
+                    $("p:first").addClass('color')
+                })
+                $("#remove-class").click(() => {
+                    $("p:first").removeClass('color')
+                })
+                $("#toggle-class").click(() => {
+                    $("p:first").toggleClass('color')
+                })
+            });
+        </script>
+        <style>
+            .color{
+                color:#D0D8;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#" id="add-class">Add class</a>
+        <a href="#" id="remove-class">Remove class</a>
+        <a href="#" id="toggle-class">Add class</a>
+        <a href="#" id="increase-class">Add class</a>
+        
+        <div id="container">
+            <p>
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+            </p>
+
+            <p id="second">
+                A copy of something cool written here. JQuery
+                A copy of something cool written here.
+                A copy of something cool written here.
+                A copy of something cool written here.
+                A copy of something cool written here.
+            </p>
+ 
+            <p>
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+            </p>
+
+        </div>
+        <div id="div-list">
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </div>
+    </body>
+</html>

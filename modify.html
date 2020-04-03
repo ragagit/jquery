@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery</title>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script>
+            $("document").ready(() => {
+                
+                // $("#container p:first").empty();
+                // $("#container p:first").wrap("<div class='colorBox'>");
+                //$("<div>Container</div>").replaceAll("#container")
+                $("#container").replaceWith("Replacement with replaceWith")
+            });
+        </script>
+        <style>
+            .colorBox{
+                color:#D0D8;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+                Something cool written here.
+            </p>
+
+            <p id="second">
+                A copy of something cool written here. JQuery
+                A copy of something cool written here.
+                A copy of something cool written here.
+                A copy of something cool written here.
+                A copy of something cool written here.
+            </p>
+ 
+            <p>
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+                A copy of something even more cool written here.
+            </p>
+
+        </div>
+        <div id="div-list">
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </div>
+    </body>
+</html>

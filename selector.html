@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery</title>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script>
+            $("document").ready(() => {
+                $("h1:first").css("border","3px solid green")
+                $("h1:eq(1)").css("border", "3px solid blue")
+                $("h1:last").css("border", "3px solid red")
+                $("h1:eq(2)").css("border", "3px solid brown")   
+            })
+        </script>
+    </head>
+    <body>
+        <h1>I love JQuery 1</h1>
+        <h1>I love JQuery 2</h1>
+        <h1>I love JQuery 3</h1>
+        <h1>I love JQuery 4</h1>
+    </body>
+</html>

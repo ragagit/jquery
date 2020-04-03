@@ -1,0 +1,206 @@
+JQuery
+
+-To download jquery.com
+https://jquery.com/download/
+Get the compressed version it runs faster. The uncompressed version allows you to make modifications which we don't need 
+
+Append
+            $("document").ready(() => {
+                $("body").append("<h1>I love JQuery</h1>")
+            })
+
+Advanced Selector
+            $("document").ready(() => {
+                // $("div > p").css("border", "2px blue solid")
+                // $("div > p#second").css("border", "2px blue solid")
+                $("#div-list").css("border", "2px blue solid")
+
+Animate
+        <script>
+            $("document").ready(() => {
+                $("#grow").click(()=>{
+                    $("#textBox").animate({width:"500px"}, 2000)
+                })
+                $("#move").click(() => {
+                    $("#textBox").animate({ marginLeft: "200px" }, 2000)
+                })
+                $("#bigger").click(() => {
+                    $("#textBox").animate({ fontSize: "40px" }, 2000)
+                })
+                $("#many").click(() => {
+                    $("#textBox").animate({ fontSize: "40px", marginLeft: "200px", width: "600px" }, 2000)
+                })                 
+            });
+        </script>
+        <style>
+            #textBox{
+                width:200px;
+                height: 200px;
+                background: #ccc;
+                position: absolute;
+                margin-top: 20px;
+            }
+        </style>
+
+Create
+        <script>
+            $("document").ready(() => {
+                $("p:first-child").css("border", "2px blue solid")
+                $("p:last-of-type").css("border", "2px blue solid")
+                $("p:contains('JQuery')").css("border", "2px blue solid")
+                $("p:nth-child(3)").css("border", "2px blue solid")
+            });
+        </script>
+
+            $("document").ready(() => {
+                $("#append").click(()=>{
+                    $("#container p:first").append("Appending some text")
+                })
+                $("#preappend").click(() => {
+                    $("p:first").prepend("Pre appending some text")
+                })
+            });
+
+Events
+                $("#textBox").on("click", whenMouseIsClicked);
+                $("#textBox").on("mouseleave", whenMouseLeaves)
+
+                function whenMouseIsClicked(){
+                     $("#textBox").html("<h1>You clicked me</h1>")
+                 }
+                 function whenMouseLeaves() {
+                     $("#textBox").html("<h1>Where are you going</h1>")
+                 }
+                $("#textBox").on("click", () => {
+                    $("#textBox").html("<h1>You clicked me</h1>")
+                });
+                $("#textBox").on("mouseleave", () => {
+                    $("#textBox").html("<h1>Where are you going</h1>")
+                });
+
+Fading
+            $("document").ready(() => {
+                $("#fade-in").on("click", () => {
+                    $("#textBox").fadeIn(3000, () => {
+                        alert("I am done fading in")
+                    })
+                })
+
+                $("#fade-out").on("click", () => {
+                    $("#textBox").fadeOut("fast", () => {
+                        alert("I am done fading out")
+                    })
+                })
+            });
+
+Filter
+            $("document").ready(() => {
+                $("#container p:eq(1)").css("border", "1px blue solid")
+            });
+
+Hide-Show
+            $("document").ready(() => {
+                $("#show").on("click", () => {
+                    $("#textBox").show();
+                });
+                $("#hide").on("click", () => {
+                    $("#textBox").hide();
+                });
+            });
+
+Hover
+        <script>
+            $("document").ready(() => {
+                $(".textCopy").hover(highlightCopy);
+
+                function highlightCopy(){
+                    $(this).toggleClass("highlight");
+                }
+            });
+        </script>
+        <style>
+            .highlight{
+                background: 1px 1px #ccaadd;
+            }
+        </style>
+
+Modify
+            $("document").ready(() => {
+                
+                 $("#container p:first").empty();
+                 $("#container p:first").wrap("<div class='colorBox'>");
+                 $("<div>Container</div>").replaceAll("#container")
+                $("#container").replaceWith("Replacement with replaceWith")
+            });
+            $("document").ready(() => {
+                $("#add-class").click(()=>{
+                    $("p:first").addClass('color')
+                })
+                $("#remove-class").click(() => {
+                    $("p:first").removeClass('color')
+                })
+                $("#toggle-class").click(() => {
+                    $("p:first").toggleClass('color')
+                })
+            });
+Modifycss
+        <script>
+            $("document").ready(() => {
+                $("#add-class").click(()=>{
+                    $("p:first").addClass('color')
+                })
+                $("#remove-class").click(() => {
+                    $("p:first").removeClass('color')
+                })
+                $("#toggle-class").click(() => {
+                    $("p:first").toggleClass('color')
+                })
+                $("#increase-class").click(() => {
+                    $("p:first").css("font-size","+=1")
+                })
+            });
+        </script>
+        <style>
+            .color{
+                color:#D0D8;
+            }
+        </style>
+
+Replace
+            $("document").ready(() => {
+                var newText = $("<p>")
+                newText.append("<i> The is a replacement text</i>")
+                $("#textArea").html(newText)
+            })
+
+Selector
+            $("document").ready(() => {
+                $("h1:first").css("border","3px solid green")
+                $("h1:eq(1)").css("border", "3px solid blue")
+                $("h1:last").css("border", "3px solid red")
+                $("h1:eq(2)").css("border", "3px solid brown")   
+            })
+            $("document").ready(() => {
+                $("p").css("border", "3px red dotted")
+                $("#headerTop").css("border", "1px blue solid")
+            });
+
+Slide
+            $("document").ready(() => {
+                $("#slide-up").click(()=>{
+                    $("#textBox").slideUp("2000", "linear");
+                })
+                $("#slide-down").click(() => {
+                    $("#textBox").slideDown("2000", "linear");
+                })
+                $("#slide-toggle").click(() => {
+                    $("#textBox").slideToggle("2000", "linear");
+                })
+            });
+
+Toggle
+            $("document").ready(() => {
+                $("#toggleMe").click( () => {
+                    $("#textBox").toggle("4000", "swing")
+                });
+            });

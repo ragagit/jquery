@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQuery</title>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script>
+            $("document").ready(() => {
+                $("#toggleMe").click( () => {
+                    $("#textBox").toggle("4000", "swing")
+                });
+            });
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <a href="#" id="toggleMe">Toggle Me</a>
+        <div id="textBox">
+            Something cool written here.
+        </div>
+        <div class="textCopy">
+            A copy of something cool written here.
+        </div>
+    </body>
+</html>
